@@ -8,7 +8,7 @@ describe('merge', () => {
 
   before(function() {
     randomArray = [];
-    for(let i = 0; i < 10; i++) {
+    for(let i = 0; i < 100; i++) {
       randomArray.push(Math.floor(Math.random() * (10 - 1)) + 1);
     }
   })
@@ -19,7 +19,7 @@ describe('merge', () => {
   })
 
   it('should preload with an array of 10 items', () => {
-    expect(randomArray).to.have.lengthOf(10);
+    expect(randomArray).to.have.lengthOf(100);
   })
 
   it('should have function sortArray', () => {
@@ -40,8 +40,6 @@ describe('merge', () => {
     var array3Me = merge.combineTwoSortedArrays(array1, array2);
 
     expect(array3Me).to.deep.equal(array3Js);
-
-
 
   })
 
