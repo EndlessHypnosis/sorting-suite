@@ -9,16 +9,17 @@ describe('insertionSort', () => {
   before(function() {
     randomArray = [];
     for(let i = 0; i < 100; i++) {
-      randomArray.push(Math.floor(Math.random() * (10 - 1)) + 1);
+      randomArray.push(Math.floor(Math.random() * (100 - 1)) + 1);
     }
+    jsSortedArray = Array.from(randomArray).sort(function (a, b) {  return a - b;  });
   })
 
   beforeEach(function() {
     //unSortedArray = randomArray.slice();
-    jsSortedArray = Array.from(randomArray).sort();
+    // jsSortedArray = Array.from(randomArray).sort(function (a, b) {  return a - b;  });
   })
 
-  it('should preload with an array of 10 items', () => {
+  it('should preload with an array of 100 items', () => {
     expect(randomArray).to.have.lengthOf(100);
   })
 

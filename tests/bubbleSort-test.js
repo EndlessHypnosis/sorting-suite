@@ -8,29 +8,30 @@ describe('bubbleSort', () => {
 
   before(function() {
     randomArray = [];
-    for(let i = 0; i < 10; i++) {
-      randomArray.push(Math.floor(Math.random() * (10 - 1)) + 1);
+    for(let i = 0; i < 100; i++) {
+      randomArray.push(Math.floor(Math.random() * (100 - 1)) + 1);
     }
+    jsSortedArray = Array.from(randomArray).sort(function (a, b) {  return a - b;  });
   })
 
   beforeEach(function() {
     //unSortedArray = randomArray.slice();
-    jsSortedArray = Array.from(randomArray).sort();
+    // jsSortedArray = Array.from(randomArray).sort(function (a, b) {  return a - b;  });
   })
 
-  it.skip('should preload with an array of 10 items', () => {
-    expect(randomArray).to.have.lengthOf(10);
+  it('should preload with an array of 100 items', () => {
+    expect(randomArray).to.have.lengthOf(100);
   })
 
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     expect(bubbleSort).to.exist;
   })
 
-  it.skip('should start out unsorted', () => {
+  it('should start out unsorted', () => {
     expect(randomArray).to.not.deep.equal(jsSortedArray);
   })
 
-  it.skip('should return a sorted array', () => {
+  it('should return a sorted array', () => {
     let mySortedArray = bubbleSort(randomArray);
     // console.log('unsorted:', unSortedArray);
     // console.log('my sort:', mySortedArray);

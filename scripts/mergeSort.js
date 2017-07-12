@@ -2,11 +2,11 @@
 
 function sortArray(array) {
 
-  console.log('sortArray | full array:', array);
+  // console.log('sortArray | full array:', array);
 
   if (array.length < 2) {
 
-    console.log('sortArray | returns:', array);
+    // console.log('sortArray | returns:', array);
     return array;
 
   } else {
@@ -15,15 +15,15 @@ function sortArray(array) {
     var midpoint = Math.floor(array.length / 2);
 
     var subArray1 = arrayCopy.splice(0, midpoint);
-    console.log('sortArray | sub 1:', subArray1);
+    // console.log('sortArray | sub 1:', subArray1);
     var subArray2 = arrayCopy.slice();
-    console.log('sortArray | sub 2:', subArray2);
+    // console.log('sortArray | sub 2:', subArray2);
 
     var combined = combineTwoSortedArrays(sortArray(subArray1), sortArray(subArray2));
     return combined;
 
   }
-  console.log('sortArray | combined:', combined);
+  // console.log('sortArray | combined:', combined);
 
 
   // split OA  (original array) into 2 halves
@@ -43,8 +43,8 @@ function sortArray(array) {
 
 function combineTwoSortedArrays(arrAy, arrBy) {
 
-  console.log('ctsa | arrAy:', arrAy);
-  console.log('ctsa | arrBy:', arrBy);
+  // console.log('ctsa | arrAy:', arrAy);
+  // console.log('ctsa | arrBy:', arrBy);
 
   var arrCy = [];
   // var leftOvers; // leftovers will be used to store the remaining items from largest array
@@ -84,7 +84,7 @@ function combineTwoSortedArrays(arrAy, arrBy) {
 
   }
 
-  console.log('ctsa | arrCy:', arrCy);
+  // console.log('ctsa | arrCy:', arrCy);
 
   //arrCy = arrCy.concat(leftOvers); // push the leftovers back on the end
 
