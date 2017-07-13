@@ -37,8 +37,6 @@ function quickSort(array) {
 
   }
 
-
-  //return array.sort();
 }
 
 module.exports = quickSort;

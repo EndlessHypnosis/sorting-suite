@@ -16,7 +16,7 @@ function insertionSort(array) {
                                           // the array doens't have that item then
     sortedArray.push(itemToInsert);
 
-    indexOfCurrItem = i // sortedArray.indexOf(itemToInsert);
+    indexOfCurrItem = i;
     indexOfPrevItem = indexOfCurrItem - 1;
 
     // >= 0 because we start at -1, so it will skip on the first insert
