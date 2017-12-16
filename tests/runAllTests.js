@@ -162,7 +162,7 @@ describe('Insertion Sort', () => {
     expect(insertionSort).to.exist;
   })
 
-  it('insertionSort should sort localSmallIntArray', () => {
+  it.only('insertionSort should sort localSmallIntArray', () => {
     jsSortedArray = Array.from(localSmallIntArray).sort(function (a, b) { return a - b; });
     let mySortedArray = insertionSort(localSmallIntArray);
 
