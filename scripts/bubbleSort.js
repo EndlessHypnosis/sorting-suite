@@ -1,6 +1,3 @@
-
-
-
 function bubbleSort(array) {
 
   for (let i = 0; i < array.length; i++) {
@@ -16,9 +13,7 @@ function bubbleSort(array) {
 
     }
   }
-
   return array;
-
 }
 
 module.exports = bubbleSort;

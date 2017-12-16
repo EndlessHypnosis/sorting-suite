@@ -1,5 +1,3 @@
-
-
 function insertionSort(array) {
   var unSortedArray = array.slice();
   var arrayLength = array.length;
@@ -22,6 +20,9 @@ function insertionSort(array) {
     // >= 0 because we start at -1, so it will skip on the first insert
     // then on the 2nd, the prev index will be 0, so it will compare, and so on
     while (indexOfPrevItem >= 0) {
+      console.log("---------")
+      console.log(unSortedArray)
+      console.log(sortedArray)
       if (sortedArray[indexOfCurrItem] < sortedArray[indexOfPrevItem]) {
         [sortedArray[indexOfPrevItem], sortedArray[indexOfCurrItem]] = [sortedArray[indexOfCurrItem], sortedArray[indexOfPrevItem]];
         // we needed to swap, which means we have to keep going down the line
